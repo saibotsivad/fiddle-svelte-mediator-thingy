@@ -1,0 +1,11 @@
+<button on:click="load()">load</button>
+<p>-{{thing}}-</p>
+<script>
+export default {
+    methods: {
+        load() {
+            this.mediatorCall('load').then(thing => this.set({ thing }))
+        }
+    }
+}
+</script>
